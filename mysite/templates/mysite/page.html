@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+<title>Currency Converter</title>
+  </head>
+  <body>
+<h1>Currency Converter</h1>
+
+<form action="{% url 'output' %}"   method="post">
+ {% csrf_token %}
+	<label>First Currency </label>
+		<select name="cur1">
+			<option value="eur">eur</option>
+			 <option value="usd">usd</option>
+  			 <option value="aud">aud</option>
+ 			 <option value="pln">pln</option>
+ 	 		 <option value="chf">chf</option>
+ 	 	</select>
+ 	 <label>Second Currency </label>
+		<select name="cur2">
+			 <option value="eur">eur</option>
+			 <option value="usd">usd</option>
+  			 <option value="aud">aud</option>
+ 			 <option value="pln">pln</option>
+ 	 		 <option value="chf">chf</option>
+ 	 	</select>
+ 	 	<h3>Type in the amount of money to convert:</h3>
+            <input name = "money" placeholder="Enter amount of money here">
+	<button type=”submit”> Submit </button>
+</form>
+
+  </body>
+</html>
